@@ -1,34 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 <head>
-<title>ANKA BUSINESS SUPPORT SYSTEM</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-</style>
-</head>
-<body>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">14 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by G-18
-  </div>
-</div>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Anka</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/demo.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body class="ss-preload">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header 
+    ================================================== -->
+    <header>
+        <div class="row">
+            <div class="column lg-12 text-center">
+
+                <h1>ANKA BUSINESS SUPPORT<span>.</span></h1>
+
+                <p class="lead">
+                ANKA business support services is an NGO that seeks to provide support for interested startups. 
+                </p>
+
+            </div>
+        </div>
+    </header> <!-- end header -->
+
+
+    <!-- main content
+    ================================================== -->
+    <main>
+        <div class="row block-lg-one-third block-md-one-half block-tab-whole">
+           
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-static.html" title="static background">
+                        <img src="images/demo/knox-static.jpg" srcset="images/demo/knox-static.jpg 1x, images/demo/knox-static@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Static Background</h3>
+                </div>
+            </div>
+
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-slides.html" title="slideshow background">
+                        <img src="images/demo/knox-slides.jpg" srcset="images/demo/knox-slides.jpg 1x, images/demo/knox-slides@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Slideshow Background</h3>
+                </div>
+            </div>
+
+            <div class="column entry">
+                <div class="entry__thumb">
+                    <a href="index-particles.html" title="particles background">
+                        <img src="images/demo/knox-particles.jpg" srcset="images/demo/knox-particles.jpg 1x, images/demo/knox-particles@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+                <div class="entry__title">
+                    <h3>Particles Background</h3>
+                </div>
+            </div>
+            
+        </div>
+    </main> <!--  end main -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script>
+        
+        (function(html) {
+
+            'use strict';
+
+            html.className = html.className.replace(/\bno-js\b/g, '') + 'js';
+
+            const body = document.querySelector('body');
+            const preloader = document.querySelector('#preloader');
+
+            if (!preloader) return;
+
+            window.addEventListener('load', function() {
+
+                body.classList.remove('ss-preload');
+                body.classList.add('ss-loaded');
+
+                preloader.addEventListener('transitionend', function afterTransition(e) {
+                    if (e.target.matches('#preloader'))  {
+                        body.classList.add('ss-show');
+                        e.target.style.display = 'none';
+                        preloader.removeEventListener(e.type, afterTransition);
+                    }
+                });
+
+            });
+
+        })(document.documentElement);
+    
+    </script>
 
 </body>
+
 </html>
